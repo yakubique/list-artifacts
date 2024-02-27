@@ -1,0 +1,34 @@
+name: "List Artifacts"
+description: List a build artifacts that can be used by subsequent workflow steps.
+author: Vladimir Levin
+branding:
+  icon: code
+  color: purple
+inputs:
+  name:
+    description: The name of the artifact to delete; multiple names can be supplied on new lines.
+    required: true
+  token:
+    description: GitHub token with read access to actions for the repository.
+    required: true
+    default: ${{ github.token }}
+  useGlob:
+    description: Indicates whether the name, or names, should be treated as glob patterns.
+    required: false
+    default: "true"
+  repository:
+    description: 'The repository owner and the repository name joined together by "/".
+      If github-token is specified, this is the repository that artifacts will be listed from.'
+    required: false
+    default: ${{ github.repository }}
+  run-id:
+    description: 'The id of the workflow run where the desired download artifact was uploaded from.
+      If github-token is specified, this is the run that artifacts will be listed from.'
+    required: false
+    default: ${{ github.run_id }}
+outputs:
+  result:
+    description: Result list in JSON format
+runs:
+  using: 'node20'
+  main: 'action/index.js'
