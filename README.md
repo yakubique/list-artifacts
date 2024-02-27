@@ -56,3 +56,8 @@ List a build artifacts that can be used by subsequent workflow steps
 | result | string | Result list in JSON format |
 
 <!-- AUTO-DOC-OUTPUT:END -->
+
+
+----
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S1UZ9P7)
