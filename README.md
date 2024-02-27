@@ -30,3 +30,29 @@ List a build artifacts that can be used by subsequent workflow steps
 #    }
 #  ]
 ```
+
+## Inputs
+
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+
+|   INPUT    |  TYPE  | REQUIRED |           DEFAULT            |                                                                                     DESCRIPTION                                                                                      |
+|------------|--------|----------|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    name    | string |   true   |                              |                                              The name of the artifact to <br>delete; multiple names can be supplied <br>on new lines.                                                |
+| repository | string |  false   | `"${{ github.repository }}"` |    The repository owner and the repository <br>name joined together by "/". If <br>github-token is specified, this is the <br>repository that artifacts will be listed <br>from.     |
+|   run-id   | string |  false   |   `"${{ github.run_id }}"`   | The id of the workflow run <br>where the desired download artifact was <br>uploaded from. If github-token is specified, <br>this is the run that artifacts <br>will be listed from.  |
+|   token    | string |   true   |   `"${{ github.token }}"`    |                                                          GitHub token with read access to <br>actions for the repository.                                                            |
+|  useGlob   | string |  false   |           `"true"`           |                                                    Indicates whether the name, or names, <br>should be treated as glob patterns.                                                     |
+
+<!-- AUTO-DOC-INPUT:END --> 
+
+
+
+## Outputs
+
+<!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
+
+| OUTPUT |  TYPE  |        DESCRIPTION         |
+|--------|--------|----------------------------|
+| result | string | Result list in JSON format |
+
+<!-- AUTO-DOC-OUTPUT:END -->
