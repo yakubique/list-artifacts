@@ -6,7 +6,7 @@ branding:
   color: purple
 inputs:
   name:
-    description: The name of the artifact to delete; multiple names can be supplied on new lines.
+    description: The name of the artifact to detect. Globs supported
     required: true
   token:
     description: GitHub token with read access to actions for the repository.
