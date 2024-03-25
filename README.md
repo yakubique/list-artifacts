@@ -1,8 +1,11 @@
 # List artifacts
 
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+[![Test `list-artifacts` action](https://github.com/yakubique/list-artifacts/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/list-artifacts/actions/workflows/test-myself.yaml)
+
+
 List a build artifacts that can be used by subsequent workflow steps
 
-[![Test `list-artifacts` action](https://github.com/yakubique/list-artifacts/actions/workflows/test-myself.yaml/badge.svg)](https://github.com/yakubique/list-artifacts/actions/workflows/test-myself.yaml)
 
 [Usage workflow](https://github.com/yakubique/list-artifacts/actions/workflows/test-myself.yaml)
 
@@ -10,7 +13,7 @@ List a build artifacts that can be used by subsequent workflow steps
 ```yaml
 - name: List artifacts
   id: list
-  uses: yakubique/list-artifacts@v1
+  uses: yakubique/list-artifacts@v1.1
   with:
     name: test-*
 
